@@ -1,41 +1,67 @@
 Summary of Commands -
 -
-cd:
+**cd:**
   * no Arg:
+    
             [user@sahara ~/lecture1]$ cd
-            [user@sahara ~]$ 
+    
+            [user@sahara ~]$
+    
   * w/ path to directory:
+    
             [user@sahara ~]$ cd lecture1/
+    
             [user@sahara ~/lecture1]$
+    
   * w/ path to file:
+    
             [user@sahara ~/lecture1]$ cd README
+    
             bash: cd: README: Not a directory
-ls:
+    
+**ls:**
+
   * no Arg:
+    
             [user@sahara ~/lecture1]$ ls
+    
             Hello.class  Hello.java  messages  README
+    
   * w/ path to directory:
+    
             [user@sahara ~/lecture1]$ ls messages/
+    
             en-us.txt  es-mx.txt  fr.txt  zh-cn.txt
+    
   * w/ path to file:
+    
             [user@sahara ~/lecture1]$ ls messages/fr.txt
+    
             messages/fr.txt
     
-cat:
+    
+**cat:**
+
   * no Arg:
+    
             [user@sahara ~/lecture1]$ cat
-            k 
+            k
             k
             lk
             lk
             hello
             hello
+    
 
   * w/ path to directory:
+    
                 [user@sahara ~/lecture1]$ cat messages/
+    
                 cat: messages/: Is a directory
     
+    
   * w/ path to file:
+    
             [user@sahara ~/lecture1]$ cat Hello.java
     
               import java.io.IOException;
