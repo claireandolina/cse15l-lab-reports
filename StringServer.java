@@ -29,12 +29,12 @@ class Handler implements URLHandler {
 */
 
     public String handleRequest(URI url) {
-        if url.getQuery().contains("="){
+        if (url.getQuery().contains("=")){
             String[] parameters = url.getQuery().split("=");
             if (url.getPath().contains("/add-message")) {
                 if (parameters[0].equals("s")) {
                     num++;
-                    str.append(num+" "+parameters[1]+\n);
+                    str.append(num+" "+parameters[1]+"\n");
                     return String.format(str);
                     //"'%s' is now added to the master string! It's now %d", parameters[1], str);
                 }
@@ -44,13 +44,13 @@ class Handler implements URLHandler {
             }
             else if (url.getPath().contains("/search")) {
                 StringBuilder queryResult = new StringBuilder();
-                for string value : str {
+                for (string value : str) {
                     if(value.contains(parameters[1]))
                     {
                         queryResult.append(value +", ");
                     }
                 }
-                return queryResult.toString()
+                return queryResult.toString();
             }
             else{
                 return "Invalid query!";
