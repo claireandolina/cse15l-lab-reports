@@ -35,13 +35,14 @@ class Handler implements URLHandler {
                 if (parameters[0].equals("s")) {
                     num++;
                     str.append(num+" "+parameters[1]+"\n");
-                    return String.format(str);
+                    return str.toString();
                     //"'%s' is now added to the master string! It's now %d", parameters[1], str);
                 }
                 else{
                     return "Invalid query!";
                 }
             }
+                /*
             else if (url.getPath().contains("/search")) {
                 StringBuilder queryResult = new StringBuilder();
                 for (string value : str) {
@@ -51,7 +52,7 @@ class Handler implements URLHandler {
                     }
                 }
                 return queryResult.toString();
-            }
+            }*/
             else{
                 return "Invalid query!";
             }
