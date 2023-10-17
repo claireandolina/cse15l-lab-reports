@@ -13,7 +13,8 @@ class Handler implements URLHandler {
     // The one bit of state on the server: a number that will be manipulated by
     // various requests.
     int num = 0;
-    ArrayList str = new ArrayList();
+    //ArrayList str = new ArrayList();
+    StringBuilder str = new StringBuilder();
 
 
 /*
@@ -30,10 +31,12 @@ class Handler implements URLHandler {
     public String handleRequest(URI url) {
         if url.getQuery().contains("="){
             String[] parameters = url.getQuery().split("=");
-            if (url.getPath().contains("/add")) {
+            if (url.getPath().contains("/add-message")) {
                 if (parameters[0].equals("s")) {
-                    str.add(parameters[1]);
-                    return String.format("'%s' added to string list! It's now %d", parameters[1], str);
+                    num++;
+                    str.append(num+" "+parameters[1]+\n);
+                    return String.format(str);
+                    //"'%s' is now added to the master string! It's now %d", parameters[1], str);
                 }
                 else{
                     return "Invalid query!";
