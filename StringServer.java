@@ -38,7 +38,7 @@ class Handler implements URLHandler {
             if (url.getPath().contains("/add-message")) {
                 if (parameters[0].equals("s")) {
                     num++;
-                    str.append(num+" "+parameters[1]+"\n");
+                    str.append(num+". "+parameters[1]+"\n");
                     return str.toString();
                     //"'%s' is now added to the master string! It's now %d", parameters[1], str);
                 }
