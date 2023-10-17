@@ -29,6 +29,10 @@ class Handler implements URLHandler {
 */
 
     public String handleRequest(URI url) {
+        if(url.getQuery()==null)
+        {
+            return null;
+        }
         if (url.getQuery().contains("=")){
             String[] parameters = url.getQuery().split("=");
             if (url.getPath().contains("/add-message")) {
