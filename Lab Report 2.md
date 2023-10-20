@@ -31,5 +31,5 @@ Using the command line, show with ls and take screenshots of:
 <img width="641" alt="Screenshot 2023-10-20 at 3 12 09 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/8eced16b-95af-4b75-994f-1a353c1a7f89">
 
 
-Part 3
+**Part 3**
 I learned a lot about encryption/decryption strategies and the real purpose of having a public and private-facing key. By using ssh-keygen in terminal during this week's exploration and doing some further investigation on what is actually going on when this command is called, I learned how to log into a remote server without having to use a passcode each time!
