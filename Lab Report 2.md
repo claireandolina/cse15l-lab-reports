@@ -1,12 +1,5 @@
 Lab Report 2 -
 -
-**cd:**
-  * no Arg: Sets working directory to be base one (home)
-    
-            [user@sahara ~/lecture1]$ cd
-    
-            [user@sahara ~]$
-
 
 **Part 1**
 Show the code for your StringServer, and two screenshots of using /add-message.
