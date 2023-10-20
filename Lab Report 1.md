@@ -1,19 +1,33 @@
 Summary of Commands -
 -
+Although everything is correct, remember to be more thorough in your explanation and be more formal in your writing. For instace: use with instead of "w/." In addition, check the prompt again and make sure you include everything that is required for each of the categories. For example, you failed to mention any description of " What the working directory was when the command was run." Once you make all of these changes, you should get full points on the resubmission
+
+What the working directory was when the command was run
+A sentence or two explaining why you got that output (e.g. what was in the filesystem, what it meant to have no arguments).
+Indicate whether the output is an error or not, and if it’s an error, explain why it’s an error.
+
 **cd:**
   * no Arg: Sets working directory to be base one (home)
+    When this command was run, the working directory was "user@sahara ~/lecture1". After the command was run, we moved back into the home directory one level up     ("user@sahara ~"). This was the output because the cd command without arguments sends the operator back to the home directory from their original location
+    in a sub-directory. The output here is not an error.
     
             [user@sahara ~/lecture1]$ cd
     
             [user@sahara ~]$
     
   * w/ path to directory: Sets working directory to the argument directory path
+    When this command was run, the working directory was "user@sahara ~". After the command was run, we moved into the subdirectory within the home folder,
+    called lecture1 ("user@sahara ~/lecture1"). This was the output because the cd command with a valid argument (path to a directory) sends the operator inside
+    of the indicated directory. The output here is not an error.
     
             [user@sahara ~]$ cd lecture1/
     
             [user@sahara ~/lecture1]$
     
   * w/ path to file: Error- unable to switch directories into a file
+        When this command was run, the working directory was "user@sahara ~". After the command was run, we moved into the subdirectory within the home folder,
+    called lecture1 ("user@sahara ~/lecture1"). This was the output because the cd command with a valid argument (path to a directory) sends the operator inside
+    of the indicated directory. The output here is not an error.
     
             [user@sahara ~/lecture1]$ cd README
     
