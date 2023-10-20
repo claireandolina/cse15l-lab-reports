@@ -28,6 +28,7 @@ The path to the public key for your SSH key for logging into ieng6 (within your 
 ![image](https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/be5e57f7-8559-4946-98fc-10d29181d24d)
 
 A terminal interaction where you log into ieng6 with your course-specific account without being asked for a password.
+<img width="641" alt="Screenshot 2023-10-20 at 3 12 09 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/8eced16b-95af-4b75-994f-1a353c1a7f89">
 
 
 Part 3
