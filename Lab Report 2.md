@@ -3,8 +3,56 @@ Lab Report 2 -
 
 **Part 1**
 Show the code for your StringServer, and two screenshots of using /add-message.
-![screencapture-github-claireandolina-cse15l-lab-reports-blob-main-StringServer-java-2023-10-16-18_18_33](https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/983e4ed5-98bc-45ef-8a56-7265c2f9afa5)
 
+```
+import java.io.IOException;
+import java.net.*;
+
+class Handler implements URLHandler {
+    int num = 0;
+    StringBuilder str = new StringBuilder();
+
+    public String handleRequest(URI url) {
+        if(url.getQuery()==null)
+        {
+            return null;
+        }
+        if (url.getQuery().contains("=")){
+            String[] parameters = url.getQuery().split("=");
+            if (url.getPath().contains("/add-message")) {
+                if (parameters[0].equals("s")) {
+                    num++;
+                    str.append(num+". "+parameters[1]+"\n");
+                    return str.toString();
+                }
+                else{
+                    return "Invalid query!";
+                }
+            }
+            else{
+                return "Invalid query!";
+            }
+        }
+        else {
+            return "404 Not Found!";
+        }
+}
+}
+
+class StringServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+
+```
 For each of the two screenshots, describe which methods in your code are called?
   * In both screenshots: StringServer.main()->Server.start(int port, URLHandler new Handler())->Server.createContext("/", new ServerHttpHandler(handler)). Once this method has been called, the request entrypoint has been established, and once there is a request, the method "handle(final HttpExchange Exchange)" will be called in Server.java. This method calls an overloaded version of handleRequest(URI url) within our Handler.java class.
 
@@ -21,10 +69,10 @@ For each of the two screenshots, describe which methods in your code are called?
 **Part 2**
 Using the command line, show with ls and take screenshots of:
 
-1. The path to the private key for your SSH key for logging into ieng6 (on your computer or on the home directory of the lab computer)
+1. The path to the private key for your SSH key for logging into ieng6 (on your computer or on the home directory of the lab computer) is `/Users/claire/.ssh/id_rsa`
 <img width="449" alt="Screenshot 2023-10-17 at 7 53 49 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/a42dbf1e-e674-48c7-a9f8-6bff3ec079ec">
 
-2. The path to the public key for your SSH key for logging into ieng6 (within your account on ieng6)
+2. The path to the public key for your SSH key for logging into ieng6 (within your account on ieng6) is `/Users/claire/.ssh/id_rsa.pub`
 ![image](https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/be5e57f7-8559-4946-98fc-10d29181d24d)
 
 3. A terminal interaction where you log into ieng6 with your course-specific account without being asked for a password.
