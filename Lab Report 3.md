@@ -99,6 +99,7 @@ If the file is a directory, it will not descend into it during the search.
 
        -type c
 Returns in output only if file is of type c, where c = {b=block, c=character, d=directory, p=named pipe, f=regular file, l=symbolic link, s=socket, D=door}.
+
 <img width="658" alt="Screenshot 2023-11-02 at 11 17 31 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/62fd763a-e1ab-440b-a7c5-a60ff001b529">
 <img width="718" alt="Screenshot 2023-11-02 at 11 18 32 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/4cf659b3-8e3e-4192-adf5-46c896a09176">
 
