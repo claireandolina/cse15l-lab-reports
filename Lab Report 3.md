@@ -103,6 +103,7 @@ Returns in output only if file is of type c, where c = {b=block, c=character, d=
 <img width="658" alt="Screenshot 2023-11-02 at 11 17 31 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/62fd763a-e1ab-440b-a7c5-a60ff001b529">
 <img width="718" alt="Screenshot 2023-11-02 at 11 18 32 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/4cf659b3-8e3e-4192-adf5-46c896a09176">
 
+This is useful to narrow your recursive search to a specific extension, but also to get an overview of what filetypes are not within your search (to search for more than one type at once, you can supply the combined list of type letters separated by a comma `,').
 
 <href = "https://man7.org/linux/man-pages/man1/find.1.html">Source for the above commands.</href>
-This is useful to narrow your recursive search to a specific extension, but also to get an overview of what filetypes are not within your search (to search for more than one type at once, you can supply the combined list of type letters separated by a comma `,').
+
