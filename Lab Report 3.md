@@ -77,6 +77,7 @@ Chosen command: `find`
 
 
        -maxdepth n
+       
 The `find` will descend at most `n` (a positive integer) directory levels below the starting-points.
 
 <img width="685" alt="Screenshot 2023-11-02 at 10 28 12 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/8d0142e2-739b-4c9d-a13c-53f611ccafbc">
