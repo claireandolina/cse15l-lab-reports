@@ -105,5 +105,5 @@ Returns in output only if file is of type c, where c = {b=block, c=character, d=
 
 This is useful to narrow your recursive search to a specific extension, but also to get an overview of what filetypes are not within your search (to search for more than one type at once, you can supply the combined list of type letters separated by a comma `,').
 
-<href = "https://man7.org/linux/man-pages/man1/find.1.html">Source for the above commands.</href>
+Source for the above commands: https://man7.org/linux/man-pages/man1/find.1.html
 
