@@ -74,12 +74,16 @@ Chosen command: `find`
 
 `find`
 
+
+
        -maxdepth n
 The `find` will descend at most `n` (a positive integer) directory levels below the starting-points.
 
 <img width="685" alt="Screenshot 2023-11-02 at 10 28 12 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/8d0142e2-739b-4c9d-a13c-53f611ccafbc">
 
 `-maxdepth` is useful to very explicitly state the endpoint of a search, if you know for certain that the file being searched for cannot be nested beyond a certain level. If you use -maxdepth 0, you can apply tests and actions (if specified) only to the starting-points.
+
+
 
        -quit
        
@@ -89,19 +93,28 @@ Once the file is found, the process will exit immediately (if no errors have occ
               
 One way that `-quit` might be useful is to stop searching the file system immediately once we have found what we want, to prevent uneccessary extra processing. If paired with options like `-print`, like seen above in the second command, we can still be sure that the file has been found.
 
+
+
        `-prune`
+       
 If the file is a directory, it will not descend into it during the search.
 
 <img width="1081" alt="Screenshot 2023-11-02 at 11 00 40 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/78d77825-db97-4876-942c-f0b856166b49">
+
 <img width="1192" alt="Screenshot 2023-11-02 at 11 03 50 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/de926e2d-ddf0-4596-951f-668c7109e922">
+
 <img width="511" alt="Screenshot 2023-11-02 at 11 04 27 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/9c4f84a0-cbea-4629-8b83-09a4c4a9d9f5">
 
 `prune` is useful for ignoring all directories that are irrelevant to a search, or may cost too much to be searched through due to large size. You could use `prune` to skip a directory and all files and directories under it, and print the names of the other files found.
 
+
+
        -type c
+       
 Returns in output only if file is of type c, where c = {b=block, c=character, d=directory, p=named pipe, f=regular file, l=symbolic link, s=socket, D=door}.
 
 <img width="658" alt="Screenshot 2023-11-02 at 11 17 31 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/62fd763a-e1ab-440b-a7c5-a60ff001b529">
+
 <img width="718" alt="Screenshot 2023-11-02 at 11 18 32 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/4cf659b3-8e3e-4192-adf5-46c896a09176">
 
 This is useful to narrow your recursive search to a specific extension, but also to get an overview of what filetypes are not within your search (to search for more than one type at once, you can supply the combined list of type letters separated by a comma `,').
