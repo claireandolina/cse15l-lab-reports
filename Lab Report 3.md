@@ -71,12 +71,13 @@ Why the fix addresses the issue:
 
 Part 2 - Researching Commands
 Chosen command: `find` 
-
-`find`
-
+```
+find
+```
 
 
        -maxdepth n
+       
        
 The `find` will descend at most `n` (a positive integer) directory levels below the starting-points.
 
