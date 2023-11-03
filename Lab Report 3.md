@@ -74,16 +74,16 @@ Chosen command: `find`
 
 `find`
 
-       -maxdepth levels
-The `find` will descend at most `levels` (a non-negative integer) levels of directories below the starting-points.
+       -maxdepth n
+The `find` will descend at most `n` (a positive integer) directory levels below the starting-points.
 
 <img width="685" alt="Screenshot 2023-11-02 at 10 28 12 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/8d0142e2-739b-4c9d-a13c-53f611ccafbc">
 
-`-maxdepth` is useful to very explicitly state the endpoint of a search, if you know for certain that the file being searched for cannot be nested beyond a certain level. Using -maxdepth 0 means only apply tests and actions (if specified) to the starting-points themselves.
+`-maxdepth` is useful to very explicitly state the endpoint of a search, if you know for certain that the file being searched for cannot be nested beyond a certain level. If you use -maxdepth 0, you can apply tests and actions (if specified) only to the starting-points.
 
        -quit
        
-Once the file is found, the process will exit immediately (with return value zero if no errors have occurred).
+Once the file is found, the process will exit immediately (if no errors have occured, will return zero).
 
 <img width="901" alt="Screenshot 2023-11-02 at 10 41 17 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/b47bf168-efc4-4e3a-ac8c-18022a7a8e7d">
               
@@ -91,6 +91,7 @@ One way that `-quit` might be useful is to stop searching the file system immedi
 
        `-prune`
 If the file is a directory, it will not descend into it during the search.
+
 <img width="1081" alt="Screenshot 2023-11-02 at 11 00 40 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/78d77825-db97-4876-942c-f0b856166b49">
 <img width="1192" alt="Screenshot 2023-11-02 at 11 03 50 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/de926e2d-ddf0-4596-951f-668c7109e922">
 <img width="511" alt="Screenshot 2023-11-02 at 11 04 27 PM" src="https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/9c4f84a0-cbea-4629-8b83-09a4c4a9d9f5">
