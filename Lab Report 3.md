@@ -95,7 +95,7 @@ One way that `-quit` might be useful is to stop searching the file system immedi
 
 
 
-       `-prune`
+       -prune
        
 If the file is a directory, it will not descend into it during the search.
 
