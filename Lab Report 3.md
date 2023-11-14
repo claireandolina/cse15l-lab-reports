@@ -74,7 +74,7 @@ Chosen command: `find`
 ```
 find
 ```
-Source for the find command: [](https://man7.org/linux/man-pages/man1/find.1.html)
+Source for the find command: https://man7.org/linux/man-pages/man1/find.1.html
 
        -maxdepth n
        
@@ -85,8 +85,7 @@ The `find` will descend at most `n` (a positive integer) directory levels below 
 
 `-maxdepth` is useful to very explicitly state the endpoint of a search, if you know for certain that the file being searched for cannot be nested beyond a certain level. If you use -maxdepth 0, you can apply tests and actions (if specified) only to the starting-points.
 
-Source for the -maxdepth option: [](https://man7.org/linux/man-pages/man1/find.1.html)
-
+Source for the -maxdepth option: https://man7.org/linux/man-pages/man1/find.1.html
 
        -quit
        
@@ -96,7 +95,7 @@ Once the file is found, the process will exit immediately (if no errors have occ
               
 One way that `-quit` might be useful is to stop searching the file system immediately once we have found what we want, to prevent uneccessary extra processing. If paired with options like `-print`, like seen above in the second command, we can still be sure that the file has been found.
 
-Source for the -quit option: [](https://man7.org/linux/man-pages/man1/find.1.html)
+Source for the -quit option: https://man7.org/linux/man-pages/man1/find.1.html
 
 
        -prune
@@ -111,7 +110,7 @@ If the file is a directory, it will not descend into it during the search.
 
 `prune` is useful for ignoring all directories that are irrelevant to a search, or may cost too much to be searched through due to large size. You could use `prune` to skip a directory and all files and directories under it, and print the names of the other files found.
 
-Source for the -prune option: [](https://man7.org/linux/man-pages/man1/find.1.html)
+Source for the -prune option: https://man7.org/linux/man-pages/man1/find.1.html
 
 
        -type c
@@ -124,5 +123,5 @@ Returns in output only if file is of type c, where c = {b=block, c=character, d=
 
 This is useful to narrow your recursive search to a specific extension, but also to get an overview of what filetypes are not within your search (to search for more than one type at once, you can supply the combined list of type letters separated by a comma `,').
 
-Source for the -type option: [](https://man7.org/linux/man-pages/man1/find.1.html)
+Source for the -type option: https://man7.org/linux/man-pages/man1/find.1.html
 
