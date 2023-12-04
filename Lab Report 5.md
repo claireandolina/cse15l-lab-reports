@@ -42,7 +42,10 @@ public static void main(String[] args)
 </pre>
 
 Output:
-  ![image](https://github.com/claireandolina/cse15l-lab-reports/assets/108210076/59d1972b-9db0-4168-a03c-b67c85dfddf2)
+[user@sahara ~]$ javac ListExamples.java
+[user@sahara ~]$ java ListExamples
+Moon, moon, MOON
+
 
 My symptom is that the filtered input array is printing with the correct contents, but somehow in the reverse order. I'm guessing that this must have something to do with how the array is being re-populated, but I don't see how my code is failing to add in the correct order. For every in-order iteration, a string is added to the result, as it appears. Am I misunderstanding something about what I'm trying to do here? Is my populating method completely incorrect?
 
