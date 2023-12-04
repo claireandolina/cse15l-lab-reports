@@ -27,7 +27,7 @@ public static void main(String[] args)
 {
     List<String> input = Arrays.asList("Moon", "MOO", "moon", "MOON");
     List<String> filtered = ListExamples.filter(input);
-    for(int i =0; i &#60 filtered.size();i++)
+    for(int i =0; i < filtered.size();i++)
     {
         if(i==filtered.size()-1)
         {
